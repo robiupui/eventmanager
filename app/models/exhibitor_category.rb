@@ -1,3 +1,6 @@
 class ExhibitorCategory < ActiveRecord::Base
   attr_accessible :name
+  
+  has_many :exhibitors
+  
 end
