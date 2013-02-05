@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Start date</th>
     <th>End date</th>
+    <th>Venue Name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= meeting.name %></td>
     <td><%= meeting.start_date %></td>
     <td><%= meeting.end_date %></td>
+    <td><%= meeting.venue.name %></td>
     <td><%= link_to 'Show', meeting %></td>
     <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
     <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>

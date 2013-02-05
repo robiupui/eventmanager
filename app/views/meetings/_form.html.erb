@@ -23,6 +23,15 @@
     <%= f.label :end_date %><br />
     <%= f.datetime_select :end_date %>
   </div>
+  
+  
+  <div class="field">
+    <%= f.label :venue %><br />
+    <%= f.collection_select :venue_id, Venue.all.collect, :id, :name, :prompt => "Select a venue" %>
+  </div>
+  
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>

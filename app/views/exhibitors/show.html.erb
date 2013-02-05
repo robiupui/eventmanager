@@ -10,6 +10,11 @@
   <%= @exhibitor.description %>
 </p>
 
+<p>
+  <b>Category</b>
+  <%= @exhibitor.exhibitor_category.name %>
+</p>
+
 
 <%= link_to 'Edit', edit_exhibitor_path(@exhibitor) %> |
 <%= link_to 'Back', exhibitors_path %>
