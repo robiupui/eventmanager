@@ -14,8 +14,8 @@
 <% @meetings.each do |meeting| %>
   <tr>
     <td><%= meeting.name %></td>
-    <td><%= meeting.start_date %></td>
-    <td><%= meeting.end_date %></td>
+    <td><%= meeting.start_date.strftime("%m/%d/%Y %I:%M %p") %></td>
+    <td><%= meeting.end_date.strftime("%m/%d/%Y %I:%M %p") %></td>
     <td><%= meeting.venue.name %></td>
     <td><%= link_to 'Show', meeting %></td>
     <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
