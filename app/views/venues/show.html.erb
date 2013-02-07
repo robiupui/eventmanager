@@ -26,5 +26,15 @@
 </p>
 
 
+
+<div id="floatbox">
+	<b>Meetings:</b><br />
+	<% @venue.meetings.each do |m| %>
+		<%= link_to m.name, m %> <br />
+	<% end %>
+</div>
+
+<br /><br />
+
 <%= link_to 'Edit', edit_venue_path(@venue) %> |
 <%= link_to 'Back', venues_path %>

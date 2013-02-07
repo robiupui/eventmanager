@@ -1,4 +1,6 @@
 Eventmanager::Application.routes.draw do
+  root :to => "exhibitors#index"
+  
   resources :venues
 
 

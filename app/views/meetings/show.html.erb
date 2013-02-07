@@ -15,11 +15,21 @@
   <%= @meeting.end_date %>
 </p>
 
-<p>
-  <b>Venue Name:</b>
-  <%= @meeting.venue.name %>
-</p>
 
 
+<div id="floatbox">
+	<b>Venue Information:</b><br />
+	<%= link_to @meeting.venue.name, @meeting.venue %><br />
+	<%= @meeting.venue.address %><br />
+	<%= @meeting.venue.city %>, <%= @meeting.venue.state %> <%= @meeting.venue.zip %>
+	
+	<br /><br />
+	<b>Sponsors:</b><br />
+	<% @meeting.sponsors.each do |s| %>
+		<%= link_to s.exhibitor.name, s.exhibitor %> <br />
+	<% end %>
+</div>
+
+<br /><br />
 <%= link_to 'Edit', edit_meeting_path(@meeting) %> |
 <%= link_to 'Back', meetings_path %>

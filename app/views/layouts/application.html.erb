@@ -7,8 +7,48 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+		<!-- Begin Wrapper -->
+<div id="wrapper">
+
+  <!-- Begin Header -->
+  <div id="header">
+
+    This is the Header
+
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Navigation -->
+  <div id="navigation">
+  	<ul>
+  	<li><%= link_to 'Home', root_url %></li>
+  	<li><%= link_to 'Exhibitors', exhibitors_path %></li>
+  	<li><%= link_to 'Meetings', meetings_path %></li>
+  	<li><%= link_to 'Venues', venues_path %></li>
+  	<li><%= link_to 'Exhibitor Categories', exhibitor_categories_path %></li>
+	</ul>
+  </div>
+  <!-- End Navigation -->
+
+  <!-- Begin Left Column -->
+  <div id="leftcolumn">
+
 
 <%= yield %>
+
+</div>
+  <!-- End Left Column -->
+  <!-- Begin Footer -->
+  <div id="footer">
+
+    This is the Footer
+
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
 
 </body>
 </html>

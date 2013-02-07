@@ -1,5 +1,5 @@
 class Meeting < ActiveRecord::Base
-  attr_accessible :end_date, :name, :start_date, :sponsors, :venue, :venue_id
+  attr_accessible :end_date, :name, :start_date, :sponsors, :venue, :venue_id, :sponsor_ids
   
   validates :name, :presence => true
   validates :start_date, :presence => true
@@ -8,4 +8,5 @@ class Meeting < ActiveRecord::Base
   
   has_and_belongs_to_many :sponsors
   belongs_to :venue
+  has_many :exhibitors, :through => :sponsors
 end

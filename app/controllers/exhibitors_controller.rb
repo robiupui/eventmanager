@@ -1,6 +1,7 @@
 class ExhibitorsController < ApplicationController
   # GET /exhibitors
   # GET /exhibitors.json
+  
   def index
     @exhibitors = Exhibitor.all
 

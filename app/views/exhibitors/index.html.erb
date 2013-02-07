@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Description</th>
     <th>Exhibitor Category</th>
+    <th>Sponsor?</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= exhibitor.name %></td>
     <td><%= exhibitor.description %></td>
     <td><%= exhibitor.exhibitor_category.name %></td>
+    <td><%= exhibitor.is_sponsor? %></td>
     <td><%= link_to 'Show', exhibitor %></td>
     <td><%= link_to 'Edit', edit_exhibitor_path(exhibitor) %></td>
     <td><%= link_to 'Destroy', exhibitor, method: :delete, data: { confirm: 'Are you sure?' } %></td>

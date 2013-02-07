@@ -30,6 +30,16 @@
     <%= f.collection_select :venue_id, Venue.all.collect, :id, :name, :prompt => "Select a venue" %>
   </div>
   
+    <div class="field">
+    <%= f.label :sponsors %><br />
+    <% Sponsor.find(:all).each do |s| %>
+    <div>
+    	<%= check_box_tag "meeting[sponsor_ids][]", s.id, @meeting.sponsors.include?(s) %>
+    	<%= s.exhibitor.name %>    	
+    </div>
+    <% end %>
+  </div>
+  
   
   
   <div class="actions">

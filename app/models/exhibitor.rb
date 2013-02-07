@@ -7,5 +7,14 @@ class Exhibitor < ActiveRecord::Base
   
   belongs_to :exhibitor_category
   belongs_to :sponsor
+  has_many :meetings, :through => :sponsor
+    
+  def is_sponsor?
+    if self.sponsor
+      "Yes"
+    else
+      "No"
+    end
+  end
   
 end
